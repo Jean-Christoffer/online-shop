@@ -13,7 +13,7 @@ const handleActive = () => {
             <div className="mx-auto max-w-2xl px-4 py-1 sm:px-6 lg:max-w-7xl lg:px-8">
                 <nav className="flex justify-end ">
                     <ul className="flex gap-8  px-4 py-3 sm:px-6 items-center">
-                        <li><Link href="/contact">Contact</Link></li>
+                        <li className="text-1xl"><Link href="/contact">Contact</Link></li>
 
                         <button onClick={handleActive}>
                          Cart
