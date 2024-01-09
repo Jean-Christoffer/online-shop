@@ -1,0 +1,7 @@
+.customGrid{
+    display: grid;
+    grid-template-columns: 1fr minmax(480px, 50%);
+}
+.custom-color{
+    color: #f09;
+}
