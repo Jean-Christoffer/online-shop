@@ -9,7 +9,7 @@ const handleActive = () => {
 }
     return(
         <>
-        <header className="w-full  bg-black sticky top-0 z-20">
+        <header className="w-full  bg-black sticky top-0 z-20 custom-border">
             <div className="mx-auto max-w-2xl px-4 py-1 sm:px-6 lg:max-w-7xl lg:px-8">
                 <nav className="flex justify-end ">
                     <ul className="flex gap-8  px-4 py-3 sm:px-6 items-center">

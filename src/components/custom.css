@@ -41,3 +41,6 @@ color: #f09;
 .custom-bg-color{
     background-color: #f09;
 }
+.custom-border{
+    border-bottom: 1px solid #f09;
+}
