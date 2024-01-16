@@ -7,12 +7,13 @@ import "./custom.css"
 
 
 async function getData(params:string){
-    const response = await fetch(`https://api.noroff.dev/api/v1/online-shop/${params}`)
+    const response = await fetch(`http://localhost:3100/api/products/${params}`)
     const data = await response.json()
-    return data
+    console.log(data)
+    return data[0]
 }
 export default async function ProductDetails({params}:{params:{id:string}}){
-    const data:ProducData = await getData(params.id)
+    const data:ProducData = await getData(params.id)        
     let ratingArray = new Array(5).fill(0);
     
 

@@ -16,8 +16,8 @@ const Carousel: React.FC<carouselProps> = ({data}) => {
     useEffect(() => {
         console.log("Filtering");
         const filtered = data.filter(product =>
-            product.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-            product.tags[0].toLowerCase().includes(searchTerm.toLowerCase())
+            product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            product.product_tags[0].tags.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setFilteredData(filtered);
     }, [searchTerm, data]); 
@@ -78,12 +78,14 @@ const Carousel: React.FC<carouselProps> = ({data}) => {
                                         <div>
                                             <h3 className="text-sm text-gray-200">
                                                 
-                                                    {teaser.title}
+                                                    {teaser.name}
                                               
                                             </h3>
-                                            <p className="mt-1 text-sm text-gray-400">
-                                                {teaser.tags[0]}
-                                            </p>
+                                            <div>
+
+                                       
+                                            {teaser.product_tags.map(tag => <p key={tag.id} className="mt-1 text-sm text-gray-400">{tag.tags.name}</p>)}
+                                            </div>
                                         </div>
                                         <div>
                                          <p className={`text-sm ${teaser.discountedPrice < teaser.price && "line-through"}`}>${teaser.price}</p>
