@@ -19,15 +19,23 @@ router.get("/api/products", async (req, res) => {
   res.send(data);
 });
 router.get("/api/products/:id", async (req, res) => {
+  const parsedID = parseInt(req.params.id);
   const { data, error } = await supabase
     .from("products")
-    .select()
-    .is("id", req.params.id);
-    if (error) {
-      return res.status(401).send(error);
-    }
+    .select(`
+    *,
+    reviews(*),
+    product_tags!inner(*, tags(*))
+  `)
+    .eq("id", parsedID);
+
+  if (error) {
+    return res.status(401).send(error);
+  }
+
   res.send(data);
 });
+
 
 router.post("/api/products", async (req, res) => {
   const { error } = await supabase.from("products").insert({
