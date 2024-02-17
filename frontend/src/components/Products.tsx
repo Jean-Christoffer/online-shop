@@ -6,8 +6,6 @@ import {useState,useEffect} from "react"
 interface carouselProps{
     data:ProducData[]
 }
-
-
 const Carousel: React.FC<carouselProps> = ({data}) => {
     const [searchTerm, setSearchTerm] = useState("");
     const [ascending, setAscending] = useState(false);
@@ -16,8 +14,8 @@ const Carousel: React.FC<carouselProps> = ({data}) => {
     useEffect(() => {
         console.log("Filtering");
         const filtered = data.filter(product =>
-            product.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-            product.tags[0].toLowerCase().includes(searchTerm.toLowerCase())
+            product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            teaser.product_tags[0].tags.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setFilteredData(filtered);
     }, [searchTerm, data]); 
@@ -78,11 +76,11 @@ const Carousel: React.FC<carouselProps> = ({data}) => {
                                         <div>
                                             <h3 className="text-sm text-gray-200">
                                                 
-                                                    {teaser.title}
+                                                    {teaser.name}
                                               
                                             </h3>
                                             <p className="mt-1 text-sm text-gray-400">
-                                                {teaser.tags[0]}
+                                                {teaser.product_tags[0].tags.name}
                                             </p>
                                         </div>
                                         <div>

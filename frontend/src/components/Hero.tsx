@@ -8,7 +8,7 @@ const Carousel = dynamic(() =>
 )
 async function getData(){   
     try{
-        const response = await fetch("https://api.noroff.dev/api/v1/online-shop")
+        const response = await fetch("http://localhost:3100/api/products")
         const data = await response.json()
         return data
     }catch(error){
@@ -28,10 +28,10 @@ const data:ProducData[] = await getData()
             <div className="mb-8 flex flex-wrap  justify-between md:mb-16">
                 <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
                     <h1 className="mb-4 text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl textShadow">
-                        Online pop up store
+                        PopNet Boutique
                     </h1>
                     <p className="max-w-md leading-relaxed  text-gray-400 xl:text:lg">
-                        Experience Top-Quality Products - Your Satisfaction Guaranteed or Your Money Back!
+                        Experience Top-Quality Products - Your Satisfaction Guaranteed or Your Money Back.. Maybe ;)
                     </p>
                 </div>
 

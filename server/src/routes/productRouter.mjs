@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { resolveProductID } from "../middelware/resolveProductID.mjs";
 import supabase from "../db/supabase.mjs";
 const router = Router();
 
@@ -15,15 +14,22 @@ router.get("/api/products", async (req, res) => {
   if (error) {
     return res.status(401).send(error);
   }
-
+  
   res.send(data);
 });
 router.get("/api/products/:id", async (req, res) => {
+  const parsedID = parseInt(req.params.id)
+  
   const { data, error } = await supabase
     .from("products")
-    .select()
-    .is("id", req.params.id);
+    .select(`
+    *,
+    reviews(*),
+    product_tags!inner(*, tags(*))
+  `)
+    .eq("id", parsedID);
     if (error) {
+
       return res.status(401).send(error);
     }
   res.send(data);

@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import {useState} from "react";
+import { useState } from "react";
 import "./custom.css";
 interface CartProps {
   isOpen: boolean;
+  handleIsActive: () => void;
 }
 import { useShoppingCart } from "use-shopping-cart";
-const Cart: React.FC<CartProps> = ({ isOpen }) => {
+const Cart: React.FC<CartProps> = ({ isOpen, handleIsActive }) => {
   const {
     cartCount,
     cartDetails,
@@ -15,28 +16,28 @@ const Cart: React.FC<CartProps> = ({ isOpen }) => {
     decrementItem,
     redirectToCheckout,
   } = useShoppingCart();
-  const [status, setStatus] = useState('idle')
+  const [status, setStatus] = useState("idle");
 
-  async function handleClick(event) {
-    event.preventDefault()
+  async function handleClick(event: { preventDefault: () => void }) {
+    event.preventDefault();
 
-    if (cartCount > 0) {
-      setStatus('idle')
+    if (cartCount && cartCount > 0) {
+      setStatus("idle");
       try {
-        const result = await redirectToCheckout()
+        const result = await redirectToCheckout();
         if (result?.error) {
-          console.error(result)
-          setStatus('redirect-error')
+          console.error(result);
+          setStatus("redirect-error");
         }
       } catch (error) {
-        console.error(error)
-        setStatus('redirect-error')
+        console.error(error);
+        setStatus("redirect-error");
       }
     } else {
-      setStatus('missing-items')
+      setStatus("missing-items");
     }
   }
-  
+
   return (
     <>
       <div
@@ -44,7 +45,20 @@ const Cart: React.FC<CartProps> = ({ isOpen }) => {
           isOpen ? "translate-x-0" : "translate-x-full"
         } z-20`}
       >
-        <h2 className="text-lg font-bold text-black">Sidebar Content</h2>
+        <div className="flex items-center justify-between w-full">
+          <h2 className="text-lg font-bold text-black">Your cart</h2>
+          <button className="text-black w-5" onClick={handleIsActive}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              viewBox="0 0 50 50"
+            >
+              <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"></path>
+            </svg>
+          </button>
+        </div>
+
         {cartCount === 0 ? (
           <p className="text-black">Cart is empty</p>
         ) : (
@@ -52,7 +66,7 @@ const Cart: React.FC<CartProps> = ({ isOpen }) => {
             {Object.values(cartDetails ?? {}).map((entry) => {
               return (
                 <li key={entry.id} className="flex py-7">
-                  <div className="h-23 w-23 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                  <div className="h-23 w-23 flex-shrink-0 overflow-hidden rounded-md ">
                     <Image
                       src={entry.image as string}
                       alt="Product iamge"
@@ -105,7 +119,9 @@ const Cart: React.FC<CartProps> = ({ isOpen }) => {
         <div className="mt-auto flex justify-between items-center">
           <p className="text-black text-2xl">Total ${totalPrice?.toFixed(2)}</p>
           {cartCount !== 0 && (
-            <button onClick={handleClick} className="p-2 bg-black rounded">Checkout</button>
+            <button onClick={handleClick} className="p-2 bg-black rounded">
+              Checkout
+            </button>
           )}
         </div>
       </div>
