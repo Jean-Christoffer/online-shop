@@ -5,9 +5,10 @@ import AddToCart from "@/src/components/AddToCart";
 import "./custom.css";
 
 async function getData(params: string) {
-  const response = await fetch(`http://localhost:3100/api/products/${params}`);
+  const response = await fetch(`http://localhost:3000/api/product/${params}`);
   const data = await response.json();
-  return data[0];
+  console.log(data)
+  return data.data[0];
 }
 export default async function ProductDetails({
   params,
@@ -16,6 +17,7 @@ export default async function ProductDetails({
 }) {
   const data: ProducData = await getData(params.id);
   let ratingArray = new Array(5).fill(0);
+
   return (
     <>
       <section className="text-gray-700 body-font overflow-hidden text-white">
@@ -100,6 +102,7 @@ export default async function ProductDetails({
                     name={data.name}
                     price={data.discountedPrice}
                     id={params.id}
+                    price_id={data.price_id}
                   />
                 </div>
               </div>

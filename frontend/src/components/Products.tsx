@@ -12,7 +12,7 @@ const Carousel: React.FC<carouselProps> = ({data}) => {
     const [filteredData, setFilteredData] = useState([...data]);
     
     useEffect(() => {
-        console.log("Filtering");
+
         const filtered = data.filter(product =>
             product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
             teaser.product_tags[0].tags.name.toLowerCase().includes(searchTerm.toLowerCase())
