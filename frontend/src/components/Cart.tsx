@@ -41,7 +41,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, handleIsActive }) => {
   return (
     <>
       <div
-        className={`flex flex-col overflow-y-auto fixed top-0 right-0 w-96 h-full custom-bg-color p-4 transform ease-in-out duration-500 transition-transform ${
+        className={`flex flex-col overflow-y-auto fixed top-0 right-0 w-full md:w-96 h-full custom-bg-color p-4 transform ease-in-out duration-500 transition-transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } z-20`}
       >

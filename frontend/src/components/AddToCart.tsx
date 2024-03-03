@@ -1,36 +1,68 @@
-"use client"
-import { useShoppingCart } from "use-shopping-cart"
-export interface ProductCart {
-    name:string;
-    description:string;
-    price:number;
-    currency:string;
-    image:any;
-    id:string;
-    price_id:string;
- 
-}
-export default function AddToCart({name,description,price,currency,image,id, price_id}:ProductCart){
-    const {addItem,cartDetails = {} } = useShoppingCart()
-    
-    let maxAmount: boolean = cartDetails?.[price_id]?.quantity > 4;
-    const product = {
-        name:name,
-        description:description,
-        price:price,
-        currency:currency,
-        image:image,
-     
-        price_id:price_id,
-    }
+"use client";
+import { useShoppingCart } from "use-shopping-cart";
+import { useState } from "react";
+import "./custom.css";
 
-    return(
-        <>
-        <button className="bg-white p-2 text-black disabled:text-red" 
-        onClick={() => addItem(product)}
-        disabled={cartDetails[price_id]?.quantity > 4}>
-          {maxAmount ? <p>Max ammount reached</p> : <p>Add to cart</p>}
-        </button>
-        </>
-    )
+export interface ProductCart {
+  name: string;
+  description: string;
+  price: number;
+  currency: string;
+  image: any;
+  id: string;
+  price_id: string;
+}
+
+export default function AddToCart({
+  name,
+  description,
+  price,
+  currency,
+  image,
+  id,
+  price_id,
+}: ProductCart) {
+  const { addItem, cartDetails } = useShoppingCart();
+  const [buttonState, setButtonState] = useState("default");
+
+  let productQuantity = cartDetails[price_id]?.quantity ?? 0;
+  let maxAmountReached = productQuantity >= 4;
+
+  const handleClick = () => {
+    if (buttonState === "default") {
+      addItem({
+        name,
+        description,
+        price,
+        currency,
+        image,
+        price_id,
+      });
+      setButtonState("added");
+      setTimeout(() => setButtonState("default"), 1000);
+    }
+  };
+
+  let buttonText = "Add to cart";
+  let isDisabled = false;
+
+  if (maxAmountReached) {
+    buttonText = "Max amount reached";
+    isDisabled = true;
+  } else if (buttonState === "added") {
+    buttonText = "Added to cart!";
+    isDisabled = true;
+  }
+
+  return (
+    <button
+      className={`bg-white p-2 text-black ${
+        isDisabled ? "disabled:text-red" : "custom-hover"
+      }`}
+      onClick={handleClick}
+      disabled={isDisabled}
+    >
+      <p>{buttonText}</p>
+    </button>
+  );
 }

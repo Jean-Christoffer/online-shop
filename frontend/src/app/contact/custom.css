@@ -1,0 +1,30 @@
+.boxShadow {
+    color: #fff;
+    box-shadow:
+        0 0 7px #fff,
+        0 0 10px #f09,
+        0 0 21px #f09,
+        0 0 42px #f09;
+    animation: pulsate 1.5s infinite alternate;   
+}
+
+@keyframes pulsate {
+    0%, 100% {
+        box-shadow:
+            0 0 7px #fff,
+            0 0 10px #f09,
+            0 0 21px #f09,
+            0 0 42px #f09;
+    }
+    50% {
+        box-shadow:
+            0 0 10px #fff,
+            0 0 15px #f09,
+            0 0 25px #f09,
+            0 0 45px #f09;
+    }
+}
+
+.bg{
+    background-color: #f09;
+}
