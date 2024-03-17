@@ -22,7 +22,6 @@ const Products: React.FC<carouselProps> = ({ data }) => {
     setFilteredData(filtered);
   }, [searchTerm, data]);
 
-
   useEffect(() => {
     if (ascending) {
       const sorted = filteredData.sort(
@@ -37,7 +36,7 @@ const Products: React.FC<carouselProps> = ({ data }) => {
       setFilteredData(descending);
     }
     return setFilteredData(filteredData);
-  }, [ascending,filteredData]);
+  }, [ascending, filteredData]);
 
   function handleSort() {
     setAscending(!ascending);

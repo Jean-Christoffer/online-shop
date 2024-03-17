@@ -1,7 +1,6 @@
 "use client";
 import { useShoppingCart } from "use-shopping-cart";
 import { useState } from "react";
-import "./custom.css";
 
 export interface ProductCart {
   name: string;

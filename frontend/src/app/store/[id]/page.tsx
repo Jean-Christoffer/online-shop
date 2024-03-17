@@ -1,13 +1,13 @@
 import { ProducData } from "@/src/lib/interface";
 import Image from "next/image";
 import GetRatings from "../../../components/uiComponents/GetRatings";
-import AddToCart from "@/src/components/AddToCart";
-import "./custom.css";
+import AddToCart from "@/src/components/uiComponents/AddToCart";
+import "./styles.css";
 
 async function getData(params: string) {
   const response = await fetch(`http://localhost:3000/api/product/${params}`);
   const data = await response.json();
-  console.log(data)
+  console.log(data);
   return data.data[0];
 }
 export default async function ProductDetails({

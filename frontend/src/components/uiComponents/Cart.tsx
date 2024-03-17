@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import "./custom.css";
+
 interface CartProps {
   isOpen: boolean;
   handleIsActive: () => void;
