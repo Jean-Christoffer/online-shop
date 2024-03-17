@@ -1,14 +1,17 @@
 "use client";
 import Link from "next/link";
-import Cart from "./uiComponents/Cart";
-import { useState } from "react";
+import Cart from "../components/uiComponents/Cart";
 import Image from "next/image";
+import CartButton from "../components/uiComponents/CartButton"
+import { useState } from "react";
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(false);
   const handleActive = () => {
+    
     setIsActive(!isActive);
   };
+
   return (
     <>
       <header className="w-full  bg-black sticky top-0 z-20">
@@ -22,9 +25,11 @@ export default function Nav() {
                 <Link href="/contact">Contact</Link>
               </li>
               <li>
-                <button onClick={handleActive}>Cart</button>
+       
+                <CartButton handleIsActive= {handleActive} />
               </li>
             </ul>
+      
           </nav>
         </div>
         <Cart isOpen={isActive} handleIsActive={handleActive} />

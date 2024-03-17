@@ -1,15 +1,19 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
-import { ProducData } from "@/src/lib/interface";
+
+import { ProductData } from "@/src/lib/models/interface";
 import { useState, useEffect } from "react";
+
+import ProductItem from "./ProductItem"
+
 interface carouselProps {
-  data: ProducData[];
+  data: ProductData[];
 }
 const Products: React.FC<carouselProps> = ({ data }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [ascending, setAscending] = useState(false);
   const [filteredData, setFilteredData] = useState([...data]);
+
+
 
   useEffect(() => {
     const filtered = data.filter(
@@ -74,44 +78,8 @@ const Products: React.FC<carouselProps> = ({ data }) => {
             </div>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 min-h-screen">
-            {filteredData.map((teaser) => {
-              return (
-                <Link key={teaser.id} href={`/store/${teaser.id}`}>
-                  <div className="group relative custom-hover rounded">
-                    <div className="box-shadow aspect-square w-full overflow-hidden rounded-md relative lg:h-80">
-                      <Image
-                        src={teaser.imageUrl}
-                        alt="teaserImage"
-                        className="w-full h-full object-cover object-center lg:h-full lg:w-full"
-                        width={300}
-                        height={300}
-                      />
-                    </div>
-                    <div className="mt-4 flex justify-between">
-                      <div>
-                        <h3 className="text-sm text-gray-200">{teaser.name}</h3>
-                        <p className="mt-1 text-sm text-gray-400">
-                          {teaser.product_tags[0].tags.name}
-                        </p>
-                      </div>
-                      <div>
-                        <p
-                          className={`text-sm ${
-                            teaser.discountedPrice < teaser.price &&
-                            "line-through"
-                          }`}
-                        >
-                          ${teaser.price}
-                        </p>
-                        {teaser.discountedPrice < teaser.price && (
-                          <p className="text-sm">${teaser.discountedPrice}</p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
+         
+      {filteredData.map((teaser, idx) => <ProductItem data={teaser} key={teaser.id} />)}
             {filteredData.length === 0 && (
               <div className="group relative">
                 <h1 className="text-2xl">No results found</h1>

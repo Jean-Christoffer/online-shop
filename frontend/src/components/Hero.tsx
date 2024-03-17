@@ -1,4 +1,4 @@
-import { ProducData } from "@/src/lib/interface";
+import { ProducData } from "@/src/lib/models/interface";
 import Scene from "./Scene";
 import Scene2 from "./Scene2";
 import Products from "./Products";

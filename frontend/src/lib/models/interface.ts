@@ -1,4 +1,4 @@
-export interface ProducData {
+export interface ProductData {
   product_tags: any;
   id: number;
   name: string;

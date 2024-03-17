@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import { ProducData } from "@/src/lib/interface";
+import { ProductData } from "@/src/lib/models/interface";
 import { useCallback } from "react";
 
 export default async function Home() {
@@ -13,7 +13,7 @@ export default async function Home() {
     }
   }, []);
 
-  const data: ProducData[] = await getData();
+  const data: ProductData[] = await getData();
   return (
     <main>
       <Hero data={data} />
