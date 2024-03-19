@@ -13,7 +13,7 @@ export default async function ProductPage({
 
     let baseUrl
     if (typeof window !== 'undefined') return '';
-    const vc = process.env.VERCEL_URL;
+    const vc = process.env.API_URL;
     if (vc){
       baseUrl = `https://${vc}`
     }else{
