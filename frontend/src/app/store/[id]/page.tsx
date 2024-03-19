@@ -13,7 +13,7 @@ export default async function ProductPage({
    // const baseUrl = typeof window !== 'undefined' ? '' : 'http://localhost:3000';
     try {
       const response = await fetch(
-        `/api/product/${params.id}`
+        `https://online-shop-a21cueqh4-jeanchristoffers-projects.vercel.app/api/product/${params.id}`
       );
       const data = await response.json();
   

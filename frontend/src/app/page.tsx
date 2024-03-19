@@ -6,7 +6,7 @@ export default async function Home() {
   const getData = useCallback(async () => {
   //  const baseUrl = typeof window !== 'undefined' ? '' : 'http://localhost:3000';
     try {
-      const response = await fetch(`/api/products`);
+      const response = await fetch(`https://online-shop-a21cueqh4-jeanchristoffers-projects.vercel.app/api/products`);
       const data = await response.json();
       return data.data;
     } catch (error) {
