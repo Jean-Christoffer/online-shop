@@ -14,7 +14,7 @@ export default async function Home() {
     }
    
     try {
-      const response = await fetch(`${baseUrl}/api/products`);
+      const response = await fetch(`${process.env.API_URL}/api/products`);
       const data = await response.json();
       return data.data;
     } catch (error) {

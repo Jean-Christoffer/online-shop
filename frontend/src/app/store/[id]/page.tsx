@@ -21,7 +21,7 @@ export default async function ProductPage({
     }
     try {
       const response = await fetch(
-        `${baseUrl}/api/product/${params.id}`
+        `${process.env.API_URL}/api/product/${params.id}`
       );
       const data = await response.json();
   
