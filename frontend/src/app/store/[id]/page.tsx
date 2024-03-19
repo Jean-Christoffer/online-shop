@@ -10,10 +10,10 @@ export default async function ProductPage({
   params: { id: string };
 }) {
   const getData = useCallback(async () => {
-   // const baseUrl = typeof window !== 'undefined' ? '' : 'http://localhost:3000';
+    const baseUrl = `https://${process.env.VERCEL_URL}`;
     try {
       const response = await fetch(
-        `https://online-shop-a21cueqh4-jeanchristoffers-projects.vercel.app/api/product/${params.id}`
+        `${baseUrl}/api/product/${params.id}`
       );
       const data = await response.json();
   

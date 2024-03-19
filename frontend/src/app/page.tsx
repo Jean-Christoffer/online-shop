@@ -4,9 +4,9 @@ import { useCallback } from "react";
 
 export default async function Home() {
   const getData = useCallback(async () => {
-  //  const baseUrl = typeof window !== 'undefined' ? '' : 'http://localhost:3000';
+    const baseUrl = `https://${process.env.VERCEL_URL}`;
     try {
-      const response = await fetch(`https://online-shop-a21cueqh4-jeanchristoffers-projects.vercel.app/api/products`);
+      const response = await fetch(`${baseUrl}/api/products`);
       const data = await response.json();
       return data.data;
     } catch (error) {
