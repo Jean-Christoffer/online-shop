@@ -1,14 +1,13 @@
 "use client";
 import Link from "next/link";
-import Cart from "../components/uiComponents/Cart";
+import Cart from "./cart/Cart";
 import Image from "next/image";
-import CartButton from "../components/uiComponents/CartButton"
+import CartButton from "./cart/CartButton";
 import { useState } from "react";
 
 export default function Nav() {
   const [isActive, setIsActive] = useState(false);
   const handleActive = () => {
-    
     setIsActive(!isActive);
   };
 
@@ -25,11 +24,9 @@ export default function Nav() {
                 <Link href="/contact">Contact</Link>
               </li>
               <li>
-       
-                <CartButton handleIsActive= {handleActive} />
+                <CartButton handleIsActive={handleActive} />
               </li>
             </ul>
-      
           </nav>
         </div>
         <Cart isOpen={isActive} handleIsActive={handleActive} />

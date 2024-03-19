@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import { ProductData } from "@/src/lib/models/interface";
+import { ProductData } from "@/src/lib/interface";
 import { useCallback } from "react";
 
 export default async function Home() {

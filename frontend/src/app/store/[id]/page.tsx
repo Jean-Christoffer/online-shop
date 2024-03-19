@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import { ProductData } from "@/src/lib/models/interface";
+import { ProductData } from "@/src/lib/interface";
 
-import ProductDetails from "@/src/components/ProductDetails";
+import ProductDetails from "@/src/components/uiComponents/ProductDetails";
 import "./styles.css";
 
 export default async function ProductPage({

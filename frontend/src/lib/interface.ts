@@ -10,7 +10,8 @@ export interface ProductData {
   rating: number;
   tags: Tag[];
   reviews: Reviews[];
-  price_id:string;
+  price_id: string;
+  count?: number | undefined;
 }
 interface Reviews {
   id: number;

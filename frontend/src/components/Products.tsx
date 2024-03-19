@@ -1,9 +1,9 @@
 "use client";
 
-import { ProductData } from "@/src/lib/models/interface";
+import { ProductData } from "@/src/lib/interface";
 import { useState, useEffect } from "react";
 
-import ProductItem from "./ProductItem"
+import ProductItem from "./ProductItem";
 
 interface carouselProps {
   data: ProductData[];
@@ -12,8 +12,6 @@ const Products: React.FC<carouselProps> = ({ data }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [ascending, setAscending] = useState(false);
   const [filteredData, setFilteredData] = useState([...data]);
-
-
 
   useEffect(() => {
     const filtered = data.filter(
@@ -78,8 +76,9 @@ const Products: React.FC<carouselProps> = ({ data }) => {
             </div>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 min-h-screen">
-         
-      {filteredData.map((teaser, idx) => <ProductItem data={teaser} key={teaser.id} />)}
+            {filteredData.map((teaser, idx) => (
+              <ProductItem data={teaser} key={teaser.id} />
+            ))}
             {filteredData.length === 0 && (
               <div className="group relative">
                 <h1 className="text-2xl">No results found</h1>

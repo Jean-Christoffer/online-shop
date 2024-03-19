@@ -1,8 +1,8 @@
-import { ProductData } from "../lib/models/interface";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { ProductData } from "../lib/interface";
 
-interface CartItem extends ProductData {
+export interface CartItem extends ProductData {
   count: number;
 }
 
@@ -42,7 +42,7 @@ export const useCartStore = create<CartStore>()(
       },
     }),
     {
-      name: "cart", 
+      name: "cart",
     }
   )
 );

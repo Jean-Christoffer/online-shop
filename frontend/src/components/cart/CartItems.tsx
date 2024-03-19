@@ -1,16 +1,13 @@
 "use client";
 import Image from "next/image";
 import DeleteButton from "./DeleteButton";
-import { useCartStore,CartStore } from "@/src/store/cart";
-import useStore from "../../store/useStore";
 
-export default function ListCart() {
-  const cartStore = useStore<CartStore, CartStore>(
-    useCartStore,
-    (state: any) => state
-  );
-  if (!cartStore) return <div></div>;
-  const { cart } = cartStore;
+import { CartItem } from "@/src/store/cart";
+interface CartItemsProps {
+  cart: CartItem[];
+  remove: (param: number) => void;
+}
+const CartItems: React.FC<CartItemsProps> = ({ cart, remove }) => {
   return (
     <figure className="flex flex-col gap-2 mt-4">
       {!cart.length ? (
@@ -42,7 +39,7 @@ export default function ListCart() {
                   </div>
                   <div className="flex flex-1 items-end justify-between text-sm">
                     <p className="text-black">QTY.{entry.count}</p>
-                    <DeleteButton idProduct={entry.id} />
+                    <DeleteButton productId={entry.id} remove={remove} />
                   </div>
                 </div>
               </li>
@@ -52,4 +49,5 @@ export default function ListCart() {
       )}
     </figure>
   );
-}
+};
+export default CartItems;

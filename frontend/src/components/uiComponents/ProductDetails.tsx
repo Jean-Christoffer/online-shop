@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import GetRatings from "../components/uiComponents/GetRatings";
-import { useCartStore } from "../store/cart";
-import { ProductData } from "@/src/lib/models/interface";
+import GetRatings from "./GetRatings";
+import { useCartStore } from "../../store/cart";
+import { ProductData } from "@/src/lib/interface";
+import { useState } from "react";
 
 type ProductProps = {
   data: ProductData;
@@ -11,6 +12,9 @@ type ProductProps = {
 export default function ProductDetails({ data }: ProductProps) {
   const { add: handleAddToCart } = useCartStore();
   let ratingArray = new Array(5).fill(0);
+  const [buttonText, setButtonText] = useState("Add to cart");
+  const [disabled, setDisabled] = useState(false);
+
   return (
     <div className="container px-5 py-4 mx-auto">
       <div className="lg:w-4/5 mx-auto flex flex-wrap">
@@ -73,12 +77,26 @@ export default function ProductDetails({ data }: ProductProps) {
                 ))}
             </div>
           </div>
-          <div className="flex">
+          <div className="flex items-center">
             <span className="title-font font-medium text-2xl text-white">
               $ {data.discountedPrice}
             </span>
             <div className="flex ml-auto py-2 px-6 focus:outline-none ">
-              <button onClick={() => handleAddToCart(data)}>Add To Cart</button>
+              <button
+                disabled={disabled}
+                onClick={() => {
+                  handleAddToCart(data);
+                  setButtonText("Added to cart!");
+                  setDisabled(true);
+                  setTimeout(() => {
+                    setButtonText("Add to cart");
+                    setDisabled(false);
+                  }, 1000);
+                }}
+                className="custom-bg-color p-2 rounded text-black flex items-center justify-center w-64"
+              >
+                <strong>{buttonText}</strong>
+              </button>
             </div>
           </div>
         </div>

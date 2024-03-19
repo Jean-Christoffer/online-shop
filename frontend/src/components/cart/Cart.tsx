@@ -1,6 +1,6 @@
 "use client";
-import ListCart from "./ListCart";
-import { useCartStore,CartStore } from "@/src/store/cart";
+import CartItems from "./CartItems";
+import { useCartStore, CartStore } from "@/src/store/cart";
 import { useRouter } from "next/navigation";
 import useStore from "../../store/useStore";
 
@@ -16,8 +16,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, handleIsActive }) => {
   );
   const router = useRouter();
   if (!cartStore) return <div></div>;
-  const { count, removeAll,totalPrice } = cartStore;
-  
+  const { count, removeAll, totalPrice, cart, remove } = cartStore;
 
   function handleNavigation() {
     router.push("/success");
@@ -43,7 +42,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, handleIsActive }) => {
             </svg>
           </button>
         </div>
-        <ListCart />
+        <CartItems cart={cart} remove={remove} />
         <div className="mt-auto flex justify-between items-center">
           <p className="text-black text-2xl">Total ${totalPrice()}</p>
           {count() !== 0 && (
