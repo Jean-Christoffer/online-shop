@@ -31,11 +31,12 @@ body {
 }
 * {
   scrollbar-width: thin;
-  scrollbar-color: #f09 #f09;
+  scrollbar-color: #f09 black;
 }
 *::-webkit-scrollbar {
   width: 17px;
   padding: 5px;
+  color: #f09;
 }
 
 *::-webkit-scrollbar-track {

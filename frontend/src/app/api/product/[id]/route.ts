@@ -9,7 +9,7 @@ const supabase = createClient(
 export async function GET(req: NextResponse, { params }) {
   const id = params.id;
   const parsedID = parseInt(id);
-  console.log(params);
+
   const { data, error } = await supabase
     .from("products")
     .select(

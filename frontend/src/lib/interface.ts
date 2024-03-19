@@ -1,4 +1,4 @@
-export interface ProducData {
+export interface ProductData {
   product_tags: any;
   id: number;
   name: string;
@@ -10,7 +10,8 @@ export interface ProducData {
   rating: number;
   tags: Tag[];
   reviews: Reviews[];
-  price_id:string;
+  price_id: string;
+  count?: number | undefined;
 }
 interface Reviews {
   id: number;
