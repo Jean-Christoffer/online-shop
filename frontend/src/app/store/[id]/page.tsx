@@ -10,10 +10,10 @@ export default async function ProductPage({
   params: { id: string };
 }) {
   const getData = useCallback(async () => {
-    const baseUrl = typeof window !== 'undefined' ? '' : 'http://localhost:3000';
+   // const baseUrl = typeof window !== 'undefined' ? '' : 'http://localhost:3000';
     try {
       const response = await fetch(
-        `${baseUrl}/api/product/${params.id}`
+        `/api/product/${params.id}`
       );
       const data = await response.json();
   
