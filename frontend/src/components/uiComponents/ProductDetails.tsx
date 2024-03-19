@@ -17,7 +17,7 @@ export default function ProductDetails({ data }: ProductProps) {
 
   return (
     <div className="container px-5 py-4 mx-auto">
-      <div className="lg:w-4/5 mx-auto flex flex-wrap">
+      <div className="lg:w-4/5 mx-auto flex flex-wrap items-center">
         {data.imageUrl && (
           <Image
             src={data.imageUrl}

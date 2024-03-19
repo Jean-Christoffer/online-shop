@@ -34,7 +34,7 @@ export default async function ProductPage({
   const data: ProductData = await getData();
   return (
     <>
-      <section className="text-gray-700 body-font overflow-hidden text-white">
+      <section className="text-gray-700 body-font overflow-hidden text-white mt-auto">
         <ProductDetails data={data} />
       </section>
     </>
