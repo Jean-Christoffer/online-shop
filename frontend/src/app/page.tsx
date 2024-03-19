@@ -24,6 +24,7 @@ export default async function Home() {
   }, []);
 
   const data: ProductData[] = await getData();
+  if(!data) return <div></div>
   return (
     <main>
       <Hero data={data} />
