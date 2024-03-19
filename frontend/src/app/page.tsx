@@ -4,10 +4,19 @@ import { useCallback } from "react";
 
 export default async function Home() {
   const getData = useCallback(async () => {
-    const baseUrl = `${process.env.VERCEL_URL}`;
+    let baseUrl
+    if (typeof window !== 'undefined') return '';
+    const vc = process.env.VERCEL_URL;
+    if (vc){
+      baseUrl = `https://${vc}`
+    }else{
+      baseUrl='http://localhost:3000'
+    }
+   
     try {
       const response = await fetch(`${baseUrl}/api/products`);
       const data = await response.json();
+      console.log(data)
       return data.data;
     } catch (error) {
       console.error(error);

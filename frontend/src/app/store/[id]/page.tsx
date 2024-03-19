@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { ProductData } from "@/src/lib/interface";
 
 import ProductDetails from "@/src/components/uiComponents/ProductDetails";
-import "./styles.css";
+import "./styles.css";  
 
 export default async function ProductPage({
   params,
@@ -10,7 +10,15 @@ export default async function ProductPage({
   params: { id: string };
 }) {
   const getData = useCallback(async () => {
-    const baseUrl = `${process.env.VERCEL_URL}`;
+
+    let baseUrl
+    if (typeof window !== 'undefined') return '';
+    const vc = process.env.VERCEL_URL;
+    if (vc){
+      baseUrl = `https://${vc}`
+    }else{
+      baseUrl='http://localhost:3000'
+    }
     try {
       const response = await fetch(
         `${baseUrl}/api/product/${params.id}`
