@@ -10,7 +10,7 @@ export default async function ProductPage({
   params: { id: string };
 }) {
   const getData = useCallback(async () => {
-    const baseUrl = `https://${process.env.VERCEL_URL}`;
+    const baseUrl = `${process.env.VERCEL_URL}`;
     try {
       const response = await fetch(
         `${baseUrl}/api/product/${params.id}`
