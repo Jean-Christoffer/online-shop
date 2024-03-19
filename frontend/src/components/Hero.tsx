@@ -27,7 +27,7 @@ export default function Hero(props: HeroData) {
             <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg shadow-lg md:left-16 md:top-16 lg:ml-0 ">
               <Scene
                 direction="+"
-                modelPath="./static/images/dogecoin.fbx"
+                modelPath="./static/images/dogecoin.FBX"
                 texturePaths={{
                   map: "./static/images/300coin.png",
                   heightMap: "./static/images/DisplacementMap.png",
