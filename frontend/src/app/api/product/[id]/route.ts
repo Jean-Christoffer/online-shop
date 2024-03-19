@@ -1,12 +1,15 @@
-import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { NextRequest } from "next/server";
 
 const supabase = createClient(
   process.env.SUPABASE_URL as string,
   process.env.SUPABASE_DEV_KEY as string
 );
 
-export async function GET(req: NextResponse, { params }) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
   const id = params.id;
   const parsedID = parseInt(id);
 

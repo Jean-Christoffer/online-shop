@@ -18,13 +18,16 @@ export default function ProductDetails({ data }: ProductProps) {
   return (
     <div className="container px-5 py-4 mx-auto">
       <div className="lg:w-4/5 mx-auto flex flex-wrap">
-        <Image
-          src={data.imageUrl}
-          alt="productImage"
-          width={500}
-          height={500}
-          className=" aspect-square w-full h-full lg:w-1/2 w-full object-cover object-center rounded"
-        />
+        {data.imageUrl && (
+          <Image
+            src={data.imageUrl}
+            alt="productImage"
+            width={500}
+            height={500}
+            className=" aspect-square w-full h-full lg:w-1/2 w-full object-cover object-center rounded"
+          />
+        )}
+
         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           {data.discountedPrice < data.price && (
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
@@ -78,7 +81,7 @@ export default function ProductDetails({ data }: ProductProps) {
             </div>
           </div>
           <div className="flex items-center">
-            <span className="title-font font-medium text-2xl text-white">
+            <span className="title-font font-medium text-1xl md:text-2xl text-white">
               $ {data.discountedPrice}
             </span>
             <div className="flex ml-auto py-2 px-6 focus:outline-none ">
@@ -93,7 +96,7 @@ export default function ProductDetails({ data }: ProductProps) {
                     setDisabled(false);
                   }, 1000);
                 }}
-                className="custom-bg-color p-2 rounded text-black flex items-center justify-center w-64"
+                className="custom-bg-color p-2 rounded text-black flex items-center justify-center w-60"
               >
                 <strong>{buttonText}</strong>
               </button>
