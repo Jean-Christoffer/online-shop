@@ -4,14 +4,7 @@ import { useCallback } from "react";
 
 export default async function Home() {
   const getData = useCallback(async () => {
-    let baseUrl
-    if (typeof window !== 'undefined') return '';
-    const vc = process.env.API_URL;
-    if (vc){
-      baseUrl = `https://${vc}`
-    }else{
-      baseUrl='http://localhost:3000'
-    }
+
    
     try {
       const response = await fetch(`${process.env.API_URL}/api/products`);
