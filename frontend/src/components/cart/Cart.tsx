@@ -21,9 +21,11 @@ const Cart: React.FC<CartProps> = ({ isOpen, handleIsActive }) => {
   function handleNavigation() {
     router.push("/success");
     removeAll();
+    handleIsActive();
   }
   return (
     <>
+    {isOpen && <div className="bg-black fixed inset-0 w-screen h-screen bg-opacity-75 overflow-hidden" onClick={handleIsActive}></div>}
       <div
         className={`flex flex-col overflow-y-auto fixed top-0 right-0 w-full md:w-96 h-full custom-bg-color p-4 transform ease-in-out duration-500 transition-transform ${
           isOpen ? "translate-x-0" : "translate-x-full"

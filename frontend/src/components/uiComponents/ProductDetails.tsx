@@ -73,7 +73,10 @@ export default function ProductDetails({ data }: ProductProps) {
                   >
                     <span className="flex"></span>
                     <p>
-                      <small>By {review.username}</small>
+                      <small>
+                        By{" "}
+                        <span className="custom-color">{review.username}</span>
+                      </small>
                     </p>
                     <p>{review.description}</p>
                   </div>
