@@ -30,7 +30,7 @@ export default function ProductDetails({ data }: ProductProps) {
 
         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           {data.discountedPrice < data.price && (
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">
+            <h2 className="text-sm title-font tracking-widest text-yellow-300">
               SALE
             </h2>
           )}
