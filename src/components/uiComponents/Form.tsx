@@ -56,11 +56,17 @@ export default function Form() {
   const handleSubmit = useCallback(
     (e: { preventDefault: () => void }) => {
       e.preventDefault();
-      const isInvalid = Object.values(formState).some(
+      const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+
+      const isInvalidLength = Object.values(formState).some(
         (value) => value.length < 3
       );
-      if (isInvalid) {
+      if (isInvalidLength) {
         setValidationError("All fields must be at least 3 characters long.");
+        return;
+      }
+      if (!emailRegex.test(formState.email)) {
+        setValidationError("Please enter a valid email address.");
         return;
       }
       setFormState(initialFormState);
@@ -79,6 +85,7 @@ export default function Form() {
         <label>
           First name
           <input
+            type="text"
             name="firstName"
             value={formState.firstName}
             onChange={handleChange}
@@ -90,6 +97,7 @@ export default function Form() {
         <label>
           Last name
           <input
+            type="text"
             name="lastName"
             value={formState.lastName}
             onChange={handleChange}
@@ -101,6 +109,7 @@ export default function Form() {
         <label>
           Email
           <input
+            type="email"
             name="email"
             value={formState.email}
             onChange={handleChange}
