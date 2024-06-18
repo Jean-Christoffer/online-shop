@@ -23,8 +23,8 @@ export async function GET(
   `
     )
     .eq("id", parsedID);
-  if (error) {
-    return new Response(JSON.stringify(error), {
+  if (error || !data) {
+    return new Response(JSON.stringify(error || { message: "Product not found" }), {
       status: 401,
       headers: {
         "Content-Type": "application/json",

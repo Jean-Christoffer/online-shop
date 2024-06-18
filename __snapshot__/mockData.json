@@ -1,0 +1,911 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "name": "Vanilla Perfume",
+      "description": "Women's perfume that smells a warm and sweet, with nuances of wood and jasmine.",
+      "price": 2599.99,
+      "created_at": "2024-01-14T18:43:57.011382+00:00",
+      "discountedPrice": 2079.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/1-perfume-white.jpg",
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 1,
+          "rating": 5,
+          "username": "Jim N.",
+          "created_at": "2024-01-14T18:54:08.210564+00:00",
+          "product_id": 2,
+          "description": "My partner loves it, its her favourite."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 1,
+          "tags": {
+            "id": 1,
+            "name": "perfume\n"
+          },
+          "tag_id": 1,
+          "product_id": 2
+        },
+        {
+          "id": 2,
+          "tags": {
+            "id": 2,
+            "name": "beauty"
+          },
+          "tag_id": 2,
+          "product_id": 2
+        },
+        {
+          "id": 27,
+          "tags": {
+            "id": 1,
+            "name": "perfume\n"
+          },
+          "tag_id": 1,
+          "product_id": 2
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Smartwatch",
+      "description": "Smartwatch with heart rate monitor, fitness tracking, and notifications for calls and messages.",
+      "price": 299.99,
+      "created_at": "2024-01-20T11:13:27.599161+00:00",
+      "discountedPrice": 299.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/16-smartwatch.jpg",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 15,
+          "rating": 5,
+          "username": "Sarah L.",
+          "created_at": "2024-01-20T11:14:19.327696+00:00",
+          "product_id": 18,
+          "description": "Love this smartwatch! It's easy to use and has all the features I need."
+        },
+        {
+          "id": 16,
+          "rating": 4,
+          "username": "Mike K.",
+          "created_at": "2024-01-20T11:14:39.821039+00:00",
+          "product_id": 18,
+          "description": "Great quality, but the battery life could be longer."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 28,
+          "tags": {
+            "id": 23,
+            "name": "watch"
+          },
+          "tag_id": 23,
+          "product_id": 18
+        },
+        {
+          "id": 29,
+          "tags": {
+            "id": 22,
+            "name": "wearables"
+          },
+          "tag_id": 22,
+          "product_id": 18
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Pink Candy Perfume",
+      "description": "Playful perfume based on the scent of hibiscus with nuances of vanilla.",
+      "price": 1399.99,
+      "created_at": "2024-01-20T11:11:02.475566+00:00",
+      "discountedPrice": 1049.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/8-perfume-pink-candy.jpg",
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 14,
+          "rating": 5,
+          "username": "Jamie A.",
+          "created_at": "2024-01-20T11:12:35.527625+00:00",
+          "product_id": 17,
+          "description": "Great scent, lasts very long."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 24,
+          "tags": {
+            "id": 2,
+            "name": "beauty"
+          },
+          "tag_id": 2,
+          "product_id": 17
+        },
+        {
+          "id": 25,
+          "tags": {
+            "id": 2,
+            "name": "beauty"
+          },
+          "tag_id": 2,
+          "product_id": 17
+        },
+        {
+          "id": 26,
+          "tags": {
+            "id": 2,
+            "name": "beauty"
+          },
+          "tag_id": 2,
+          "product_id": 17
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Black headphones",
+      "description": "A set of wireless black headphones.",
+      "price": 259.99,
+      "created_at": "2024-01-20T11:07:29.247213+00:00",
+      "discountedPrice": 259.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/5-headphones-black.jpg",
+      "rating": 2,
+      "reviews": [
+        {
+          "id": 10,
+          "rating": 2,
+          "username": "Mike M.",
+          "created_at": "2024-01-20T11:08:20.468932+00:00",
+          "product_id": 15,
+          "description": "Terrible audio."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 21,
+          "tags": {
+            "id": 4,
+            "name": "headphones"
+          },
+          "tag_id": 4,
+          "product_id": 15
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Gold Earrings",
+      "description": "Elegant gold earrings with a minimalist design, perfect for any occasion.",
+      "price": 999.99,
+      "created_at": "2024-01-20T11:09:01.337284+00:00",
+      "discountedPrice": 799.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/23-earrings-gold.jpg",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "id": 11,
+          "rating": 5,
+          "username": "Emma K.",
+          "created_at": "2024-01-20T11:09:48.045451+00:00",
+          "product_id": 16,
+          "description": "Love these earrings, they're so elegant and versatile."
+        },
+        {
+          "id": 12,
+          "rating": 4,
+          "username": "John P.",
+          "created_at": "2024-01-20T11:10:06.473102+00:00",
+          "product_id": 16,
+          "description": "Bought these earrings for my wife and she loves them!"
+        },
+        {
+          "id": 13,
+          "rating": 5,
+          "username": "Maggie T.",
+          "created_at": "2024-01-20T11:10:26.728166+00:00",
+          "product_id": 16,
+          "description": "These earrings are perfect for dressing up or down, I wear them all the time!"
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 22,
+          "tags": {
+            "id": 21,
+            "name": "jewelry"
+          },
+          "tag_id": 21,
+          "product_id": 16
+        },
+        {
+          "id": 23,
+          "tags": {
+            "id": 8,
+            "name": "fashion"
+          },
+          "tag_id": 8,
+          "product_id": 16
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Black watch",
+      "description": "A classic black leather watch, perfect for any occasion.",
+      "price": 399.99,
+      "created_at": "2024-01-14T21:05:34.572004+00:00",
+      "discountedPrice": 299.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/15-watch-black.jpg",
+      "rating": 3,
+      "reviews": [
+        {
+          "id": 9,
+          "rating": 3,
+          "username": "Peter S.",
+          "created_at": "2024-01-14T21:06:19.918284+00:00",
+          "product_id": 14,
+          "description": "Good watch, but the strap is a bit uncomfortable."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 19,
+          "tags": {
+            "id": 19,
+            "name": "accessories"
+          },
+          "tag_id": 19,
+          "product_id": 14
+        },
+        {
+          "id": 20,
+          "tags": {
+            "id": 20,
+            "name": "watches"
+          },
+          "tag_id": 20,
+          "product_id": 14
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Blue shoes",
+      "description": "A pair of stylish blue suede shoes for both formal and casual occasions.",
+      "price": 599.99,
+      "created_at": "2024-01-14T21:03:37.446843+00:00",
+      "discountedPrice": 599.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/18-shoes-blue.jpg",
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 8,
+          "rating": 5,
+          "username": "Sarah M.",
+          "created_at": "2024-01-14T21:04:35.592729+00:00",
+          "product_id": 13,
+          "description": "Love these shoes, perfect for any outfit!"
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 17,
+          "tags": {
+            "id": 8,
+            "name": "fashion"
+          },
+          "tag_id": 8,
+          "product_id": 13
+        },
+        {
+          "id": 18,
+          "tags": {
+            "id": 14,
+            "name": "shoes"
+          },
+          "tag_id": 14,
+          "product_id": 13
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Gold glasses",
+      "description": "Stylish pair of sunglasses that feature a gold trim.",
+      "price": 1699.99,
+      "created_at": "2024-01-14T21:02:35.51937+00:00",
+      "discountedPrice": 1529.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/6-glasses-gold.jpg",
+      "rating": 0,
+      "reviews": [],
+      "product_tags": [
+        {
+          "id": 15,
+          "tags": {
+            "id": 8,
+            "name": "fashion"
+          },
+          "tag_id": 8,
+          "product_id": 12
+        },
+        {
+          "id": 16,
+          "tags": {
+            "id": 17,
+            "name": "glasses"
+          },
+          "tag_id": 17,
+          "product_id": 12
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Portable Bluetooth Speaker",
+      "description": "Compact and lightweight portable speaker that delivers high-quality sound.",
+      "price": 149.99,
+      "created_at": "2024-01-14T21:01:37.451678+00:00",
+      "discountedPrice": 119.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/14-bluetooth-speaker.jpg",
+      "rating": 0,
+      "reviews": [],
+      "product_tags": [
+        {
+          "id": 14,
+          "tags": {
+            "id": 7,
+            "name": "audio"
+          },
+          "tag_id": 7,
+          "product_id": 11
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Black boots",
+      "description": "Stylish and comfortable black leather boots for all occasions.",
+      "price": 899.99,
+      "created_at": "2024-01-14T20:39:11.919532+00:00",
+      "discountedPrice": 799.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/22-boots-black.jpg",
+      "rating": 0,
+      "reviews": [],
+      "product_tags": [
+        {
+          "id": 12,
+          "tags": {
+            "id": 8,
+            "name": "fashion"
+          },
+          "tag_id": 8,
+          "product_id": 10
+        },
+        {
+          "id": 13,
+          "tags": {
+            "id": 14,
+            "name": "shoes"
+          },
+          "tag_id": 14,
+          "product_id": 10
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Vitamin C Serum",
+      "description": "Powerful serum containing high concentration of vitamin C, great for brightening and evening out skin tone.",
+      "price": 899.99,
+      "created_at": "2024-01-14T20:37:30.182747+00:00",
+      "discountedPrice": 899.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/24-serum-vitamin-c.jpg",
+      "rating": 3,
+      "reviews": [
+        {
+          "id": 7,
+          "rating": 3,
+          "username": "David K.",
+          "created_at": "2024-01-14T20:38:30.824069+00:00",
+          "product_id": 9,
+          "description": "It works, but it's a very expensive. I'll probably buy a cheaper alternative next time."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 10,
+          "tags": {
+            "id": 2,
+            "name": "beauty"
+          },
+          "tag_id": 2,
+          "product_id": 9
+        },
+        {
+          "id": 11,
+          "tags": {
+            "id": 12,
+            "name": "skin care"
+          },
+          "tag_id": 12,
+          "product_id": 9
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Red bag",
+      "description": "A high-quality red leather bag perfect for a night out in the town.",
+      "price": 759.99,
+      "created_at": "2024-01-14T20:35:12.161459+00:00",
+      "discountedPrice": 759.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/4-bag-red.jpg",
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 6,
+          "rating": 5,
+          "username": "Celeste W.",
+          "created_at": "2024-01-14T20:36:17.122823+00:00",
+          "product_id": 7,
+          "description": "Amazing build quality, my favourite bag"
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 8,
+          "tags": {
+            "id": 8,
+            "name": "fashion"
+          },
+          "tag_id": 8,
+          "product_id": 7
+        },
+        {
+          "id": 9,
+          "tags": {
+            "id": 9,
+            "name": "bags"
+          },
+          "tag_id": 9,
+          "product_id": 7
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Wireless Earbuds",
+      "description": "High-quality wireless earbuds with noise-cancellation and long battery life.",
+      "price": 199.99,
+      "created_at": "2024-01-14T20:29:25.251829+00:00",
+      "discountedPrice": 179.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/17-wireless-earbuds.jpg",
+      "rating": 4,
+      "reviews": [
+        {
+          "id": 5,
+          "rating": 4,
+          "username": "Max T.",
+          "created_at": "2024-01-14T20:30:14.270109+00:00",
+          "product_id": 6,
+          "description": "Great value for money, but the noise-cancellation could be better."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 6,
+          "tags": {
+            "id": 6,
+            "name": "electronics"
+          },
+          "tag_id": 6,
+          "product_id": 6
+        },
+        {
+          "id": 7,
+          "tags": {
+            "id": 7,
+            "name": "audio"
+          },
+          "tag_id": 7,
+          "product_id": 6
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "External Hard Drive",
+      "description": "Large-capacity external hard drive with USB 3.0 interface for fast data transfer.",
+      "price": 149.99,
+      "created_at": "2024-01-14T20:26:48.577702+00:00",
+      "discountedPrice": 149.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/20-external-hard-drive.jpg",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 3,
+          "rating": 4,
+          "username": "John D.",
+          "created_at": "2024-01-14T20:27:55.515089+00:00",
+          "product_id": 5,
+          "description": "Great hard drive for storing large amounts of data, but it's a bit bulky."
+        },
+        {
+          "id": 4,
+          "rating": 5,
+          "username": "Megan B.",
+          "created_at": "2024-01-14T20:28:34.30174+00:00",
+          "product_id": 5,
+          "description": "This external hard drive is perfect for my needs. It's fast and has a lot of storage space."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 5,
+          "tags": {
+            "id": 5,
+            "name": "storage"
+          },
+          "tag_id": 5,
+          "product_id": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Gold headphones",
+      "description": "Professional headphones with gold trim.",
+      "price": 449.99,
+      "created_at": "2024-01-14T20:24:33.507032+00:00",
+      "discountedPrice": 382.49,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/3-headphones-beats.jpg",
+      "rating": 4,
+      "reviews": [
+        {
+          "id": 2,
+          "rating": 4,
+          "username": "Michael J.",
+          "created_at": "2024-01-14T20:25:55.791259+00:00",
+          "product_id": 4,
+          "description": "Good sound quality."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 4,
+          "tags": {
+            "id": 4,
+            "name": "headphones"
+          },
+          "tag_id": 4,
+          "product_id": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Toy car",
+      "description": "A die-cast model of a toy car, perfect for displaying on your shelf.",
+      "price": 499.95,
+      "created_at": "2024-01-14T18:45:36.033691+00:00",
+      "discountedPrice": 449.95,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/12-toy-car.jpg",
+      "rating": 0,
+      "reviews": [],
+      "product_tags": [
+        {
+          "id": 3,
+          "tags": {
+            "id": 3,
+            "name": "toy"
+          },
+          "tag_id": 3,
+          "product_id": 3
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Organic shampoo",
+      "description": "An organic shampoo with bamboo fibres.",
+      "price": 104.29,
+      "created_at": "2024-04-05T07:44:49.388908+00:00",
+      "discountedPrice": 104.29,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/11-shampoo.jpg",
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 17,
+          "rating": 5,
+          "username": "John F",
+          "created_at": "2024-04-05T07:47:33.775424+00:00",
+          "product_id": 19,
+          "description": "Great shampoo, keeps my hair feeling fresh."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 30,
+          "tags": {
+            "id": 28,
+            "name": "shampoo"
+          },
+          "tag_id": 28,
+          "product_id": 19
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Black digital watch",
+      "description": "A hi-end digital watch that can answer calls, save notes and track your training.",
+      "price": 4599.99,
+      "created_at": "2024-04-05T07:50:02.499074+00:00",
+      "discountedPrice": 4599.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/9-watch-black.jpg",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 18,
+          "rating": 5,
+          "username": "Adam L",
+          "created_at": "2024-04-05T07:50:34.02407+00:00",
+          "product_id": 20,
+          "description": "Amazing watch, suits all of my needs"
+        },
+        {
+          "id": 19,
+          "rating": 4,
+          "username": "Mark P",
+          "created_at": "2024-04-05T07:50:54.662535+00:00",
+          "product_id": 20,
+          "description": "Love the watch, battery doesn't last as long as I'd like."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 31,
+          "tags": {
+            "id": 29,
+            "name": "watch"
+          },
+          "tag_id": 29,
+          "product_id": 20
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Wireless Keyboard",
+      "description": "Ergonomic wireless keyboard with a built-in customizable hotkeys.",
+      "price": 129.99,
+      "created_at": "2024-04-05T07:53:52.454489+00:00",
+      "discountedPrice": 99.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/21-wireless-keyboard.jpg",
+      "rating": 4.2,
+      "reviews": [
+        {
+          "id": 20,
+          "rating": 4,
+          "username": "Mark P",
+          "created_at": "2024-04-05T07:54:52.65792+00:00",
+          "product_id": 22,
+          "description": "Great keyboard, but some keys are a bit small."
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 33,
+          "tags": {
+            "id": 25,
+            "name": "peripherals"
+          },
+          "tag_id": 25,
+          "product_id": 22
+        },
+        {
+          "id": 34,
+          "tags": {
+            "id": 6,
+            "name": "electronics"
+          },
+          "tag_id": 6,
+          "product_id": 22
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Gaming Mouse",
+      "description": "High-performance gaming mouse with customizable buttons and RGB lighting.",
+      "price": 79.99,
+      "created_at": "2024-04-05T07:56:35.841024+00:00",
+      "discountedPrice": 59.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/19-gaming-mouse.jpg",
+      "rating": 0,
+      "reviews": [],
+      "product_tags": [
+        {
+          "id": 35,
+          "tags": {
+            "id": 6,
+            "name": "electronics"
+          },
+          "tag_id": 6,
+          "product_id": 23
+        },
+        {
+          "id": 36,
+          "tags": {
+            "id": 26,
+            "name": "gaming"
+          },
+          "tag_id": 26,
+          "product_id": 23
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "White sneakers",
+      "description": "An amazing pair of sneakers that have red trim.",
+      "price": 695.99,
+      "created_at": "2024-04-05T07:57:52.008009+00:00",
+      "discountedPrice": 695.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/7-shoes-white.jpg",
+      "rating": 5,
+      "reviews": [
+        {
+          "id": 21,
+          "rating": 5,
+          "username": "Neal D",
+          "created_at": "2024-04-05T07:58:44.833061+00:00",
+          "product_id": 24,
+          "description": "Super stylish pair of shoes, love them!"
+        },
+        {
+          "id": 22,
+          "rating": 5,
+          "username": "Jan W",
+          "created_at": "2024-04-05T07:59:07.242017+00:00",
+          "product_id": 24,
+          "description": "Amazing shoes!"
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 37,
+          "tags": {
+            "id": 14,
+            "name": "shoes"
+          },
+          "tag_id": 14,
+          "product_id": 24
+        },
+        {
+          "id": 38,
+          "tags": {
+            "id": 14,
+            "name": "shoes"
+          },
+          "tag_id": 14,
+          "product_id": 24
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "USB charger cable",
+      "description": "USB 2.0 to USB Type-C. This can be used to power all compliant mobile devices.",
+      "price": 45.99,
+      "created_at": "2024-04-05T07:59:46.955983+00:00",
+      "discountedPrice": 45.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/0-usb-plug.jpg",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 23,
+          "rating": 4,
+          "username": "Ola N.",
+          "created_at": "2024-04-05T08:00:50.77496+00:00",
+          "product_id": 25,
+          "description": "Did what it needed to do but wish it lasted longer"
+        },
+        {
+          "id": 24,
+          "rating": 5,
+          "username": "Kate M",
+          "created_at": "2024-04-05T08:01:08.692254+00:00",
+          "product_id": 25,
+          "description": "Perfect!"
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 39,
+          "tags": {
+            "id": 6,
+            "name": "electronics"
+          },
+          "tag_id": 6,
+          "product_id": 25
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Wireless Keyboard",
+      "description": "Compact and easy to use wireless keyboard compatible with all devices.",
+      "price": 75.99,
+      "created_at": "2024-04-05T08:01:43.418942+00:00",
+      "discountedPrice": 75.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/13-wireless-keyboard.jpg",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 25,
+          "rating": 5,
+          "username": "Adam B.",
+          "created_at": "2024-04-05T08:02:58.686768+00:00",
+          "product_id": 26,
+          "description": "Great keyboard with long battery life."
+        },
+        {
+          "id": 26,
+          "rating": 5,
+          "username": "Kate M.",
+          "created_at": "2024-04-05T08:03:21.07226+00:00",
+          "product_id": 26,
+          "description": "Perfect!"
+        }
+      ],
+      "product_tags": [
+        {
+          "id": 40,
+          "tags": {
+            "id": 6,
+            "name": "electronics"
+          },
+          "tag_id": 6,
+          "product_id": 26
+        },
+        {
+          "id": 41,
+          "tags": {
+            "id": 30,
+            "name": "computers"
+          },
+          "tag_id": 30,
+          "product_id": 26
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Pink shoes",
+      "description": "Gold-trimmed pink shoes perfect for any women with a sense of adventure.",
+      "price": 899.99,
+      "created_at": "2024-04-05T07:52:18.673323+00:00",
+      "discountedPrice": 899.99,
+      "imageUrl": "https://static.noroff.dev/api/online-shop/2-shoes-pink.jpg",
+      "rating": 0,
+      "reviews": [],
+      "product_tags": [
+        {
+          "id": 32,
+          "tags": {
+            "id": 14,
+            "name": "shoes"
+          },
+          "tag_id": 14,
+          "product_id": 21
+        }
+      ]
+    }
+  ]
+}
