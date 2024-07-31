@@ -3,7 +3,6 @@ import type { ProductData } from "@/src/lib/interface";
 import ProductList from "./ProductList";
 import Scene from "./Scene";
 import Heading from "./Heading";
-import { Suspense } from "react";
 
 interface HeroData {
   data: ProductData[];
@@ -24,33 +23,31 @@ export default function Hero(props: HeroData) {
             </p>
           </div>
           <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
-            <Suspense fallback={<div>Loading</div>}>
-              <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg shadow-lg md:left-16 md:top-16 lg:ml-0 ">
-                <Scene
-                  direction="+"
-                  modelPath="./static/images/dogecoin.FBX"
-                  texturePaths={{
-                    map: "./static/images/300coin.png",
-                    heightMap: "./static/images/DisplacementMap.png",
-                    normalMap: "./static/images/NormalMap.png",
-                    aoMap: "./static/images/AmbientOcclusionMap.png",
-                  }}
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg shadow-lg">
-                <Scene
-                  direction="-"
-                  modelPath="./static/images/BTC_model.FBX"
-                  texturePaths={{
-                    map: "./static/images/BTC_Albedo.png",
-                    heightMap: "./static/images/BTC_Height.png",
-                    normalMap: "./static/images/BTC_Normal.png",
-                    aoMap: "./static/images/BTC_AO.png",
-                    roughnessMap: "./static/images/BTC_Roughness.png",
-                  }}
-                />
-              </div>
-            </Suspense>
+            <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg shadow-lg md:left-16 md:top-16 lg:ml-0 ">
+              <Scene
+                direction="+"
+                modelPath="./static/images/dogecoin.FBX"
+                texturePaths={{
+                  map: "./static/images/300coin.png",
+                  heightMap: "./static/images/DisplacementMap.png",
+                  normalMap: "./static/images/NormalMap.png",
+                  aoMap: "./static/images/AmbientOcclusionMap.png",
+                }}
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <Scene
+                direction="-"
+                modelPath="./static/images/BTC_model.FBX"
+                texturePaths={{
+                  map: "./static/images/BTC_Albedo.png",
+                  heightMap: "./static/images/BTC_Height.png",
+                  normalMap: "./static/images/BTC_Normal.png",
+                  aoMap: "./static/images/BTC_AO.png",
+                  roughnessMap: "./static/images/BTC_Roughness.png",
+                }}
+              />
+            </div>
           </div>
         </div>
         <ProductList data={data} />
