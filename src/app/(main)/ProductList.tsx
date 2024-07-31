@@ -75,7 +75,7 @@ const Products: React.FC<ProductListProps> = ({ data }: ProductListProps) => {
               />
             </div>
           </div>
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 min-h-screen">
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {filteredData.map((teaser) => (
               <ProductCard data={teaser} key={teaser.id} />
             ))}
