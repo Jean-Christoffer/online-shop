@@ -18,7 +18,7 @@ export default function Nav() {
 
   return (
     <>
-      <header className="w-full  bg-black sticky top-0 z-20">
+      <header className="w-full  bg-inherit sticky top-0 z-20">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <nav className="flex justify-between items-center ">
             <Link href="/">
