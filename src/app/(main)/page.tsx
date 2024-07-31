@@ -1,4 +1,4 @@
-import Hero from "../components/Hero";
+import Hero from "./Hero";
 import { ProductData } from "@/src/lib/interface";
 import { useCallback } from "react";
 

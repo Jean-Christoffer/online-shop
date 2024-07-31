@@ -3,12 +3,12 @@
 import { ProductData } from "@/src/lib/interface";
 import { useState, useEffect } from "react";
 
-import ProductItem from "./ProductItem";
+import ProductCard from "./ProductCard";
 
-interface carouselProps {
+interface CarouselProps {
   data: ProductData[];
 }
-const Products: React.FC<carouselProps> = ({ data }) => {
+const Products: React.FC<CarouselProps> = ({ data }: CarouselProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [ascending, setAscending] = useState(false);
   const [filteredData, setFilteredData] = useState([...data]);
@@ -76,8 +76,8 @@ const Products: React.FC<carouselProps> = ({ data }) => {
             </div>
           </div>
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 min-h-screen">
-            {filteredData.map((teaser, idx) => (
-              <ProductItem data={teaser} key={teaser.id} />
+            {filteredData.map((teaser) => (
+              <ProductCard data={teaser} key={teaser.id} />
             ))}
             {filteredData.length === 0 && (
               <div className="group relative">

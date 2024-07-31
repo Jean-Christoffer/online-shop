@@ -1,19 +1,14 @@
-"use client";
 import Image from "next/image";
 import GetRatings from "./GetRatings";
-import { useCartStore } from "../../store/cart";
-import { ProductData } from "@/src/lib/interface";
-import { useState } from "react";
+import type { ProductData } from "@/src/lib/interface";
+import AddToCartButton from "./AddToCartButton";
 
 type ProductProps = {
   data: ProductData;
 };
 
 export default function ProductDetails({ data }: ProductProps) {
-  const { add: handleAddToCart } = useCartStore();
   let ratingArray = new Array(5).fill(0);
-  const [buttonText, setButtonText] = useState("Add to cart");
-  const [disabled, setDisabled] = useState(false);
 
   return (
     <div className="container px-5 py-4 mx-auto">
@@ -24,7 +19,7 @@ export default function ProductDetails({ data }: ProductProps) {
             alt="productImage"
             width={500}
             height={500}
-            className=" aspect-square w-full h-full lg:w-1/2 w-full object-cover object-center rounded"
+            className=" aspect-square w-full h-full lg:w-1/2  object-cover object-center rounded"
           />
         )}
 
@@ -88,21 +83,7 @@ export default function ProductDetails({ data }: ProductProps) {
               $ {data.discountedPrice}
             </span>
             <div className="flex ml-auto py-2 px-6 focus:outline-none ">
-              <button
-                disabled={disabled}
-                onClick={() => {
-                  handleAddToCart(data);
-                  setButtonText("Added to cart!");
-                  setDisabled(true);
-                  setTimeout(() => {
-                    setButtonText("Add to cart");
-                    setDisabled(false);
-                  }, 1000);
-                }}
-                className="custom-bg-color p-2 rounded text-black flex items-center justify-center w-60"
-              >
-                <strong>{buttonText}</strong>
-              </button>
+              <AddToCartButton data={data} />
             </div>
           </div>
         </div>

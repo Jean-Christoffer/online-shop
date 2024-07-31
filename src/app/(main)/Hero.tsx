@@ -1,8 +1,9 @@
-import { ProductData } from "../lib/interface";
+import type { ProductData } from "@/src/lib/interface";
 
-import Products from "./Products";
+import ProductList from "./ProductList";
 import Scene from "./Scene";
-import Heading from "./uiComponents/Heading";
+import Heading from "./Heading";
+
 interface HeroData {
   data: ProductData[];
 }
@@ -51,7 +52,7 @@ export default function Hero(props: HeroData) {
           </div>
         </div>
 
-        <Products data={data} />
+        <ProductList data={data} />
       </section>
     </>
   );
