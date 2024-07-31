@@ -4,11 +4,11 @@ import ProductList from "./ProductList";
 import Scene from "./Scene";
 import Heading from "./Heading";
 
-interface HeroData {
-  data: ProductData[];
+interface HeroDataProps {
+  data: ProductData[] | [];
 }
 
-export default function Hero(props: HeroData) {
+export default function Hero(props: HeroDataProps) {
   const { data } = props;
 
   return (
@@ -50,7 +50,7 @@ export default function Hero(props: HeroData) {
             </div>
           </div>
         </div>
-        <ProductList data={data} />
+        {data && <ProductList data={data} />}
       </section>
     </>
   );

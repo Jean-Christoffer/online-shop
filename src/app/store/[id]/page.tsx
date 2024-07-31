@@ -1,6 +1,4 @@
-import { useCallback } from "react";
-import { ProductData } from "@/src/lib/interface";
-
+import { getProduct } from "../../server/querys";
 import Product from "./Product";
 
 export default async function ProductPage({
@@ -8,20 +6,9 @@ export default async function ProductPage({
 }: {
   params: { id: string };
 }) {
-  const getData = useCallback(async () => {
-    try {
-      const response = await fetch(
-        `${process.env.API_URL}/api/product/${params.id}`
-      );
-      const data = await response.json();
-
-      return data.data[0];
-    } catch (error) {
-      console.error(error);
-    }
-  }, [params.id]);
-
-  const data: ProductData = await getData();
+  const { data, error } = await getProduct(params.id);
+  if (error) return <div>{error.message}</div>;
+  if (!data) return <div>Product not found</div>;
   return (
     <>
       <section className="body-font overflow-hidden text-white mt-auto">

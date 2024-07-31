@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 
 import ProductCard from "./ProductCard";
 
-interface CarouselProps {
-  data: ProductData[];
+interface ProductListProps {
+  data: ProductData[] | [];
 }
-const Products: React.FC<CarouselProps> = ({ data }: CarouselProps) => {
+const Products: React.FC<ProductListProps> = ({ data }: ProductListProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [ascending, setAscending] = useState(false);
   const [filteredData, setFilteredData] = useState([...data]);
