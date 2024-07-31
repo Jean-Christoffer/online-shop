@@ -1,3 +1,5 @@
+import { PostgrestError } from "@supabase/supabase-js";
+
 export interface ProductData {
   product_tags: any;
   id: number;
@@ -32,4 +34,12 @@ interface Tag {
 interface Tags {
   id: number;
   name: string;
+}
+export interface ProductsResponse {
+  data: ProductData[] | null;
+  error: PostgrestError | null;
+}
+export interface ProductResponse {
+  data: ProductData | null;
+  error: PostgrestError | null;
 }
