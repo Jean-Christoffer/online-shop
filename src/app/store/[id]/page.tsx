@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { ProductData } from "@/src/lib/interface";
 
-import ProductDetails from "@/src/components/uiComponents/ProductDetails";
+import Product from "./Product";
 
 export default async function ProductPage({
   params,
@@ -24,8 +24,8 @@ export default async function ProductPage({
   const data: ProductData = await getData();
   return (
     <>
-      <section className="text-gray-700 body-font overflow-hidden text-white mt-auto">
-        <ProductDetails data={data} />
+      <section className="body-font overflow-hidden text-white mt-auto">
+        <Product data={data} />
       </section>
     </>
   );

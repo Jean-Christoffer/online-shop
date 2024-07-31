@@ -1,11 +1,9 @@
-import Hero from "../components/Hero";
+import Hero from "./Hero";
 import { ProductData } from "@/src/lib/interface";
 import { useCallback } from "react";
 
 export default async function Home() {
   const getData = useCallback(async () => {
-
-   
     try {
       const response = await fetch(`${process.env.API_URL}/api/products`);
       const data = await response.json();
@@ -16,7 +14,7 @@ export default async function Home() {
   }, []);
 
   const data: ProductData[] = await getData();
-  if(!data) return <div></div>
+  if (!data) return <div>No products found</div>;
   return (
     <main>
       <Hero data={data} />

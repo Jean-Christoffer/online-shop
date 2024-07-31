@@ -1,8 +1,9 @@
-import { ProductData } from "../lib/interface";
+import type { ProductData } from "@/src/lib/interface";
 
-import Products from "./Products";
+import ProductList from "./ProductList";
 import Scene from "./Scene";
-import Heading from "./uiComponents/Heading";
+import Heading from "./Heading";
+
 interface HeroData {
   data: ProductData[];
 }
@@ -21,7 +22,6 @@ export default function Hero(props: HeroData) {
               Your Money Back..
             </p>
           </div>
-
           <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
             <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg shadow-lg md:left-16 md:top-16 lg:ml-0 ">
               <Scene
@@ -50,8 +50,7 @@ export default function Hero(props: HeroData) {
             </div>
           </div>
         </div>
-
-        <Products data={data} />
+        <ProductList data={data} />
       </section>
     </>
   );
